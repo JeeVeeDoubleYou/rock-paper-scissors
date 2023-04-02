@@ -1,11 +1,7 @@
 // rock beats scissors, scissors beat paper, paper beats rock
 
-// define playRound function
 function playRound () {
-    // Ask computer if it plays rock, paper or scissors (random)
-        // randomly generate number between one and three and pass to computerSelection 
     let computerSelection = Math.floor(Math.random()*3)+1
-        // convert 1 to rock, 2 to paper and 3 to scissors
     if (computerSelection == 1) {
         computerSelection = 'rock'
     }
@@ -15,33 +11,19 @@ function playRound () {
     if (computerSelection == 3) {
         computerSelection = 'scissors'
     }
-    // Ask user if it plays rock, paper or scissors
     let userSelection = prompt('Rock, paper, scissors! : ')
-        // make user input case insensitive -> make all lower case
     userSelection = userSelection.toLowerCase()
-    // Compare computerSelection and userSelection
-        // if computerSelection == userSelection : return tie
     if (computerSelection == userSelection) {
         return 'Tie'
     } 
-        // if computerSelection == rock 
     if (computerSelection == 'rock') {
-            // if userSelection == paper
             if (userSelection == 'paper') {
-                // user wins!
                 return 'User Wins !'
             }
-            // if userSelection == scissors
             if (userSelection == 'scissors') {
-                // computer wins!
                 return 'Computer Wins !'
             }
     }
-    // if computerSelection == paper 
-            // if userSelection == scissors
-                // user wins!
-            // if userSelection == rock
-                // computer wins!
     if (computerSelection == 'paper') {
         if (userSelection == 'scissors') {
             return 'User Wins !'
@@ -50,11 +32,6 @@ function playRound () {
             return 'Computer Wins !'
         }
     }
-        // if computerSelection == scissors 
-            // if userSelection == rock
-                // user wins!
-            // if userSelection == paper
-                // computer wins!
     if (computerSelection == 'scissors') {
         if (userSelection == 'rock') {
             return 'User Wins !'
@@ -63,10 +40,8 @@ function playRound () {
             return 'Computer Wins !'
         }
     }
-    // return winner or nothing if tie
 }
 
-// define game function with 5 times playRound inside
 function game() {
     let computersWins = 0
     let usersWins = 0
@@ -74,9 +49,6 @@ function game() {
     for (let i = 0; i < 5; i++) {
         let roundWinner = playRound()
         alert(roundWinner)
-    // keep score after each round
-        // if computer wins! computersWins ++
-        // if user wins! usersWins ++
         if (roundWinner == 'User Wins !') {
             usersWins++
         }  
@@ -85,21 +57,16 @@ function game() {
         }
         alert('Computer : ' + computersWins + '\n User : ' + usersWins)
     }
-    // after the game ends, announce the winner
-        // if computersWins > usersWins : alert('Congrats computer')
     alert('End of Game')
     if (computersWins > usersWins) {
         alert('Congrats computer')
     }
-    // if computersWins < usersWins : alert('Bravo User')
     else if (computersWins < usersWins) {
         alert('Bravo user')
     }
-    // else : alert("It's a tie! What are we going to do now?")
     else {
         alert("It's a tie! What are we going to do now?")
     }
 }
 
-// call game function
 game()
