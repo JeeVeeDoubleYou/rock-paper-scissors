@@ -73,7 +73,7 @@ function game() {
 
     for (let i = 0; i < 5; i++) {
         let roundWinner = playRound()
-        console.log(roundWinner)
+        alert(roundWinner)
     // keep score after each round
         // if computer wins! computersWins ++
         // if user wins! usersWins ++
@@ -83,22 +83,21 @@ function game() {
         if (roundWinner == 'Computer Wins !') {
             computersWins++
         }
-        console.log('Computer : ' + computersWins)
-        console.log('User : ' + usersWins)
+        alert('Computer : ' + computersWins + '\n User : ' + usersWins)
     }
     // after the game ends, announce the winner
-        // if computersWins > usersWins : console.log('Congrats computer')
-    console.log('End of Game')
+        // if computersWins > usersWins : alert('Congrats computer')
+    alert('End of Game')
     if (computersWins > usersWins) {
-        console.log('Congrats computer')
+        alert('Congrats computer')
     }
-    // if computersWins < usersWins : console.log('Bravo user')
-    if (computersWins < usersWins) {
-        console.log('Bravo user')
+    // if computersWins < usersWins : alert('Bravo User')
+    else if (computersWins < usersWins) {
+        alert('Bravo user')
     }
-    // else : console.log("It's a tie! What are we going to do now?")
+    // else : alert("It's a tie! What are we going to do now?")
     else {
-        console.log("It's a tie! What are we going to do now?")
+        alert("It's a tie! What are we going to do now?")
     }
 }
 
