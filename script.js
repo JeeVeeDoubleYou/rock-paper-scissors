@@ -57,7 +57,7 @@ function game(userSelection) {
         }
         output.textContent = 'Computer : ' + computersWins + '\n User : ' + usersWins
     }
-    alert('Final score : \n Computer : ' + computersWins + ' points \n ' + 'User : ' + usersWins + ' points' )
+    alert('Final score : \nComputer : ' + computersWins + ' points \n ' + 'User : ' + usersWins + ' points' )
     output.textContent = 'End of Game'
     if (computersWins > usersWins) {
         output2.textContent = 'User loses :( - Congrats computer'
