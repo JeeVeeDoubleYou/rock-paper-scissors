@@ -1,0 +1,36 @@
+body {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+}
+
+#scissorsButton {
+    margin-bottom: 0.5cm
+}
+
+button {
+    margin-top: 0.2cm;
+    background-color: palevioletred;
+    padding-left: 1cm;
+    padding-right: 1cm;
+    padding-top: 0.5cm;
+    padding-bottom: 0.5cm;
+    margin-bottom: 0.2cm;
+}
+
+.output {
+    margin : 0.2cm;
+    padding : 0.2cm;
+    align-self: center;
+}
+
+h1 {
+    align-self: center;
+}
