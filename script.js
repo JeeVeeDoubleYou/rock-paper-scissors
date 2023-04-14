@@ -2,39 +2,39 @@
 function playRound(userSelection) {
     let computerSelection = Math.floor(Math.random()*3)+1
     if (computerSelection == 1) {
-        computerSelection = 'rock'
+        computerSelection = ' Rock'
     }
     if (computerSelection == 2) {
-        computerSelection = 'paper'
+        computerSelection = ' Paper'
     }
     if (computerSelection == 3) {
-        computerSelection = 'scissors'
+        computerSelection = ' Scissors'
     }
     alert('Computer : ' + computerSelection + '\n User : ' + userSelection)
     if (computerSelection == userSelection) {
         return 'Tie'
     } 
-    if (computerSelection == 'rock') {
-            if (userSelection == 'paper') {
+    if (computerSelection == ' Rock') {
+            if (userSelection == ' Paper') {
                 return 'User Wins !'
             }
-            if (userSelection == 'scissors') {
+            if (userSelection == ' Scissors') {
                 return 'Computer Wins !'
             }
     }
-    if (computerSelection == 'paper') {
-        if (userSelection == 'scissors') {
+    if (computerSelection == ' Paper') {
+        if (userSelection == ' Scissors') {
             return 'User Wins !'
         }
-        if (userSelection == 'rock') {
+        if (userSelection == ' Rock') {
             return 'Computer Wins !'
         }
     }
-    if (computerSelection == 'scissors') {
-        if (userSelection == 'rock') {
+    if (computerSelection == ' Scissors') {
+        if (userSelection == ' Rock') {
             return 'User Wins !'
         }
-        if (userSelection == 'paper') {
+        if (userSelection == ' Paper') {
             return 'Computer Wins !'
         }
     }
